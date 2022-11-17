@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{    
+    font-family: 'Poppins', sans-serif;
+
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    position: relative;
+    
+
+}
+
+.container{
+  border-left: 0.1px solid rgba(255, 255, 255, 0.1);
+  border-right: 0.1px solid rgba(255, 255, 255, 0.1);
+}
+
+.swiper {
+  width: 100vw;
+  min-height: 100vh;
+  background: gray;
+}
+.swiper-pagination{
+  top: 10px;
+  left:0;
+  width:100%
+}
+
+.btn-back{
+    padding: .5rem 1rem;
+    background: white;
+    z-index: 100;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+    transition: .5s;
+    display: flex;
+}
+
+.btn-back:hover{
+    left: 50px;
+    opacity: 0.8;
+    color: black;
+}
+
+
+.swiper-wrapper{
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide{
+  width: 100vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+}
+
+.swiper-slide::before{
+    content: "";
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+.swiper-pagination-bullet{
+  background-color: white;
+}
+
+.swiper-button-prev{
+  left: 25px;
+}
+
+.swiper-button-prev::after{
+  color: black;
+  font-size: 20px;
+  font-weight: 800;
+  background: white;
+  padding: 10px 15px;
+  border-radius: 10px;
+  box-shadow: 8px 8px rgba(0, 0, 0, 1);
+  transition: .5s;
+}
+
+.swiper-button-prev:active::after{
+  box-shadow: 0px 0px 0px 0px transparent;
+}
+
+.swiper-button-next{
+  right: 25px;
+}
+
+
+.swiper-button-next::after{
+  color: black;
+  font-size: 20px;
+  font-weight: 800;
+  background: white;
+  padding: 10px 15px;
+  border-radius: 10px;
+  box-shadow: -8px 8px rgba(0, 0, 0, 1);
+  transition: .5s;
+}
+
+.container  h1{
+  font-weight: 500;
+  font-size: 3rem;
+}
+
+.container  p{
+  font-size: 0.7rem;
+  font-weight: 300;
+  width: 100%;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.swiper-button-next:active::after{
+  box-shadow: 0px 0px 0px 0px transparent;
+}
+
+
+.btn-cert{
+  text-decoration: none;
+  border: 2px solid white;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  height: fit-content;
+  box-shadow: 10px 10px rgba(0, 0, 0, 0.5);
+  margin: 2rem 0;
+}
+
+
+.btn-cert p{
+  width: fit-content;
+  height: fit-content;
+  padding: 1rem 1.5rem ;
+  margin: 0;
+  color: black;
+  background: white;
+}
+
+.btn-cert i{
+  font-size: 20px;
+  padding: 0 1.5rem;
+  color: white;
+}
+
+.img-cert-back{
+  width: 250px;
+  height: 150px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: flex-end;
+  justify-content: end;
+}
+
+.img-cert-back::before{
+    content: "";
+    width: 250px;
+    height: 150px;
+    position: absolute;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.img-cert-back p{
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  font-weight: 300;
+  right: -60px;
+  bottom: 30px;
+  position: relative;
+  letter-spacing: 4px;
+  z-index: 100;
+}
+
+.img-cert-back p:after{
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: white;
+}
+
+.img-cert{
+    width: 400px;
+    height: 250px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+    justify-content: start;
+}
+
+.img{
+    display: flex;
+    justify-content: center;
+}
+
+.img-cert p{
+    display: none;
+}
+
+@media (max-width: 850px) {
+    .img{
+        padding: 2rem 0;
+        justify-content: end;
+    }
+
+    .img-cert{
+        width: 250px;
+        height: 150px;
+    }
+
+    .img-cert p{
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+        font-weight: 300;
+        left: -60px;
+        bottom: 30px;
+        position: relative;
+        letter-spacing: 4px;
+    }
+    .img-cert p:after{
+        content: "";
+        display: block;
+        width: 100%;
+        height: 2px;
+        background: white;
+      }
+}
+
+@media (max-width: 400px) {
+    .container h1{
+        font-size: 2rem;
+    }
+}

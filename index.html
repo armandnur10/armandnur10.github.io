@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+    <nav class="nav to-left flex-column fixed-top">
+        <a class="nav-logo" href="">
+            <h1><span class="gold">M</span>annd</h1>
+            <p>Portofolio</p>
+        </a>
+
+        <div class="btn-left">
+            <!-- <i class="uil uil-angle-right"></i> -->
+            <a class="btn" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+                aria-controls="offcanvasExample">
+                <i class="uil uil-angle-right"></i>
+            </a>
+        </div>
+        <div class="offcanvas bg-dark offcanvas-start" tabindex="-1" id="offcanvasExample"
+            aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasExampleLabel">Mannd</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <a class="nav-logo" href="/index.html">
+                    <h1><span class="gold">M</span>annd</h1>
+                    <p>Portofolio</p>
+                </a>
+
+                <a class="nav-link" href="#home">
+                    <i class="uil uil-estate mx-2"></i>
+                    Home
+                </a>
+                <a class="nav-link" href="#about">
+                    <i class="uil uil-info-circle mx-2"></i>
+                    About
+                </a>
+                <a class="nav-link" href="#skills">
+                    <i class="uil uil-lightbulb-alt mx-2"></i>
+                    Skills
+                </a>
+                <a class="nav-link" href="#experience">
+                    <i class="uil uil-file-graph mx-2"></i>
+                    Experience
+                </a>
+                <a class="nav-link" href="#contact">
+                    <i class="uil uil-comment-alt-message mx-2"></i>
+                    Contact
+                </a>
+            </div>
+        </div>
+        <a class="nav-link" href="#home">
+            <i class="uil uil-estate mx-2"></i>
+            Home
+        </a>
+        <a class="nav-link" href="#about">
+            <i class="uil uil-info-circle mx-2"></i>
+            About
+        </a>
+        <a class="nav-link" href="#skills">
+            <i class="uil uil-lightbulb-alt mx-2"></i>
+            Skills
+        </a>
+        <a class="nav-link" href="#experience">
+            <i class="uil uil-file-graph mx-2"></i>
+            Experience
+        </a>
+        <a class="nav-link" href="#contact">
+            <i class="uil uil-comment-alt-message mx-2"></i>
+            Contact
+        </a>
+    </nav>
+
+    <h1 id="text-relative">Portofolio</h1>
+
+    <img src="/assets/img/rgb.png" id="img-rgb">
+    <section data-aos="fade-left" id="home" class="hero containers d-flex justify-content-center align-items-center">
+
+
+        <div class="content">
+            <h1 class="fw-bold text-white">Hi, <br>I'm <span class="gold">A</span>rmand,<br>Web <span
+                    class="text-danger ts-aqua">D</span>eveloper </h1>
+
+            <a href="#about" class="btn btn-dark my-5 fs-1 fw-semibold">View More</a>
+        </div>
+
+    </section>
+
+    <section data-aos="fade-up" id="about" class="about containers py-5">
+        <div class="content d-flex justify-content-between align-items-center">
+
+            <div>
+                <p class="fs-1 text-light fw-bold m-2 my-4">Get To Know Me !</p>
+
+                <p class="text-light opacity-75">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
+                    velit veritatis, rem veniam voluptas maxime doloremque at. Unde corrupti, odio eaque dolore et
+                    incidunt itaque doloribus dolores assumenda adipisci sapiente natus aperiam esse ex, possimus
+                    tempore nulla sequi similique, error sit placeat cupiditate! At rem necessitatibus, in libero
+                    assumenda nostrum?</p>
+
+                <p class="text-light opacity-50">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
+                    velit veritatis, rem veniam voluptas maxime doloremque at. Unde corrupti, odio eaque dolore et
+                    incidunt itaque doloribus dolores assumenda adipisci sapiente natus aperiam esse ex, possimus
+                    tempore nulla sequi similique, error sit placeat cupiditate! At rem necessitatibus, in libero
+                    assumenda nostrum?</p>
+
+                <a href="#" class="btn m-2 p-4">
+                    <i class="uil uil-message"></i>
+                    Contact Me
+                </a>
+            </div>
+
+            <div data-aos="fade-left" class="img-about m-4">
+                <img src="/assets/img/img-about.jpg" alt="">
+            </div>
+
+
+        </div>
+
+    </section>
+
+    <section class="skills containers" id="skills">
+
+        <h1 class="text-light">I'll Show You My Skills 🏆👋🏻</h1>
+
+        <div class="skills-content">
+
+
+            <div class="skills-item  text-light d-flex flex-column">
+
+                <div class="item my-3 p-3">
+                    <h1>Front End Skills</h1>
+                    <p>In front end skills i already learned about of course html, css and little of javascript like dom etc. And also i learn how to use the framework like bootstrap, tailwind, sass, etc.</p>
+
+                    <ul>
+                        <li class="html"></li>
+                        <li class="css"></li>
+                        <li class="js"></li>
+                        <li class="bootstrap"></li>
+                    </ul>
+
+                </div>
+                <div class="item my-3 p-3">
+                    <h1>Android Skills</h1>
+                    <p>The Skills that i get at school is fundamental of Kotlin, OOP Logic, Android XML, Android Structure(MVVM, MVC, ETC), API, CRUD on Android, etc. And i also learn Jetpack compose when i join event Droid Jam as a participant of Google Developer Club</p>
+
+                    <ul>
+                        <li class="kotlin"></li>
+                        <li class="android"></li>
+                        <li class="api"></li>
+                        <li class="xml"></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="skills-item text-light d-flex flex-column">
+
+                <div class="item my-3 p-3">
+                    <h1>Back End End Skills</h1>
+                    <p>In Back End i think i'm not skill enough. I just learn a basic of Python, also how to using Rest API and MySQL. I frequently use Postman as a helper for testing an API. And i also use MockAPI Website to make API manually.</p>
+                    <ul>
+                        <li class="python"></li>
+                        <li class="postman"></li>
+                        <li class="mysql"></li>
+                    </ul>
+                </div>
+                <div class="item my-3 p-3">
+                    <h1>Flutter Skills</h1>
+                    <p>In flutter I just learn the basic of it like fundamental of dart, layouting basic, use api on app. Cause i just new at this language</p>
+
+                    <ul>
+                        <li class="flutter"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <a href="/certificate.html" class="btns">See My Certificate</a>
+    </section>
+
+    <section class="experience text-white containers" id="experience">
+        <h1>My Qualification</h1>
+        <ul class="nav nav-pills d-flex justify-content-center mb-3" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="pills-education-tab" data-bs-toggle="pill"
+                    data-bs-target="#pills-education" type="button" role="tab" aria-controls="pills-food"
+                    aria-selected="true">Education</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-drinks-tab" data-bs-toggle="pill"
+                    data-bs-target="#pills-experience" type="button" role="tab" aria-controls="pills-experience"
+                    aria-selected="false">Experience</button>
+            </li>
+        </ul>
+        <div class="tab-content " id="pills-tabContent">
+
+            <!--Food Tab-->
+            <div class="tab-pane text-light fade show active" id="pills-education" role="tabpanel"
+                aria-labelledby="pills-home-tab" tabindex="0">
+                <div class="exp-content d-flex justify-content-center">
+                    <div class="left items-container mx-3 h-75">
+                        <div data-aos="fade-right"  class="items hover">
+                            <p class="items-title">Pekayon 5 Elementary School</p>
+                            <p class="items-location">East Jakarta</p>
+
+                            <p class="items-date">
+                                <i class="uil uil-calendar-alt"></i>
+                                2012 - 2017
+                            </p>
+                        </div>
+                        <div class="items"></div>
+                        <div data-aos="fade-right"  class="items hover">
+                            <p class="items-title">IDN Vocational High School</p>
+                            <p class="items-location">Bogor</p>
+
+                            <p class="items-date">
+                                <i class="uil uil-calendar-alt"></i>
+                                2021 - Now
+                            </p>
+                        </div>
+                    </div>
+                    <div class="line">
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                    </div>
+                    <div class="items-container mx-3 h-75">
+                        <div class="items"></div>
+                        <div data-aos="fade-left"  class="items hover">
+                            <p class="items-title">91 Jakarta Middle School</p>
+                            <p class="items-location">East Jakarta</p>
+
+                            <p class="items-date">
+                                <i class="uil uil-calendar-alt"></i>
+                                2018 - 2020
+                            </p>
+                        </div>
+                        <div class="items"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade text-light" id="pills-experience" role="tabpanel"
+                aria-labelledby="pills-home-tab" tabindex="0">
+                <div class="exp-content d-flex justify-content-center">
+                    <div class="left items-container mx-3 h-75">
+                        <div data-aos="fade-right"  class="items hover">
+                            <p class="items-title">
+                                <i class="uil uil-calendar-alt"></i>
+                                Year 2020
+                            </p>
+                            <p class="items-location">GCP Event</p>
+
+                            <p class="items-date">
+                                Participant
+                            </p>
+                        </div>
+                        <div class="items"></div>
+                        <div data-aos="fade-right"  class="items hover">
+                            <p class="items-title">
+                                <i class="uil uil-calendar-alt"></i>
+                                Year 2022
+                            </p>
+                            <p class="items-location">GDG Event & DroidJam Event</p>
+
+                            <p class="items-date">
+                                Participant & Google Developer Club
+                            </p>
+                        </div>
+                    </div>
+                    <div class="line">
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                    </div>
+                    <div class="items-container mx-3 h-75">
+                        <div class="items"></div>
+                        <div class="items hover">
+                            <p class="items-title">
+                                <i class="uil uil-calendar-alt"></i>
+                                Year 2021
+                            </p>
+                            <p class="items-location">IT FEST COMPTETITION</p>
+
+                            <p class="items-date">
+                                Semifinalist
+                            </p>
+                        </div>
+                        <div class="items"></div>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+            <h1>Others?</h1>
+
+            <a href="/assets/cv.pdf" class="btns" download>See My CV<a/>
+    </section>
+
+
+    <section class="contact containers" id="contact">
+        <h1 data-aos="fade-right" class="justify-content-start">Contact</h1>
+        <div class="contact-container">
+            <form name="submit-to-google-sheet">
+
+                <input  data-aos="fade-right" type="text" name="name" placeholder="Your Name..." required>
+    
+                <input data-aos="fade-right" type="email" name="email" id="email" placeholder="Your Email..." required>
+    
+                <textarea data-aos="fade-right" name="message" id="feedback" rows="10" placeholder="feedback or question" required></textarea>
+                <button class="btn">Kirim</button>
+              </form>
+        </div>
+        <h1 data-aos="fade-left" class="justify-content-end">Me!</h1>
+    </section>
+    <div class="containers-w w-con">
+        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+        <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+        <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+        <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+        </g>
+        </svg>
+    </div>
+    <section class="containers-w footer mt-0 p-0">
+        <div class="container-fluid">
+            <div class="medsos d-flex justify-content-center">
+                <i class="uil uil-github m-2 p-3 rounded"></i>
+                <i class="uil uil-linkedin m-2 p-3 rounded"></i>
+                <i class="uil uil-dribbble m-2 p-3 rounded"></i>
+            </div>
+
+            <div class="copyright">
+                <p>&copy copyright 2022 by Armand Nur Fikhri. All Right Reserved</p>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script type="text/javascript" src="vanilla-tilt.js"></script>
+
+
+    <script>
+        AOS.init();
+
+        let textRelative = document.getElementById('text-relative');
+
+        let imgRgb = document.getElementById('img-rgb');
+
+        window.addEventListener('scroll', function () {
+            let value = window.scrollY;
+
+            textRelative.style.left = value * 1.5 + 'px';
+            imgRgb.style.top = value * -1.5 + 'px'
+        })
+
+        VanillaTilt.init(document.querySelectorAll(".item"), {
+            max: 20,
+            speed: 400,
+            glare: true,
+            "max-glare": 0.5
+        });
+
+        //It also supports NodeList
+    </script>
+</body>
+
+</html>
