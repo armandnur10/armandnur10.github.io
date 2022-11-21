@@ -212,6 +212,7 @@ body{
     display: flex;
     align-items: flex-end;
     justify-content: start;
+    transition: .5s;
 }
 
 .img{
