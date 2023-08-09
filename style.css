@@ -3,8 +3,7 @@
 * {
     font-family: 'Work sans', sans-serif;
     margin: 0;
-    padding: 0;
-    overflow-x: hidden;
+    padding: 0; 
 }
 
 body {
@@ -741,6 +740,12 @@ nav{
 
 @media screen and (max-width: 800px) {
 
+    body{
+        overflow-x: hidden;
+    }
+    #img-rgb{
+        display: none;
+    }
     .btn-left {
         right: -50px;
         top: 50px;
