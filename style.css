@@ -4,6 +4,7 @@
     font-family: 'Work sans', sans-serif;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 body {
