@@ -391,26 +391,21 @@
 
         <h1>Others?</h1>
 
-        <a href="/assets/cv.pdf" class="btns" download>See My CV</a>
+        <a href="/assets/ARMAND NUR FIKHRI RAMADHAN_CV.pdf" class="btns" download>See My CV</a>
     </section>
-
-
-
-
-
 
     <section class="contact containers" id="contact">
         <h1 data-aos="fade-right" class="justify-content-start">Contact</h1>
         <div class="contact-container">
-            <form name="submit-to-google-sheet">
+            <form id="contact-form">
+                <input data-aos="fade-right" type="text" name="name" label="name" placeholder="Your Name..." required>
 
-                <input data-aos="fade-right" type="text" name="name" placeholder="Your Name..." required>
+                <input data-aos="fade-right" type="email" name="email" label="email" id="email" placeholder="Your Email..." required>
 
-                <input data-aos="fade-right" type="email" name="email" id="email" placeholder="Your Email..." required>
-
-                <textarea data-aos="fade-right" name="message" id="feedback" rows="10"
+                <textarea data-aos="fade-right" name="message" label="message" id="feedback" rows="10"
                     placeholder="feedback or question" required></textarea>
-                <button class="btn">Kirim</button>
+                <button class="btn" type="submit">Kirim</button>
+                <div id="status" class="alert hide my-3 mx-1 w-100 text-center" style="border-radius: 0;" role="alert"></div>
             </form>
         </div>
         <h1 data-aos="fade-left" class="justify-content-end">Me!</h1>
@@ -454,7 +449,49 @@
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+    <script type="text/javascript">
+      (function(){
+          emailjs.init("xWNx5sqSIxf2S2sKZ");
+      })();
+    </script>
+    <script type="text/javascript">
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+          event.preventDefault(); // Mencegah reload halaman
+          
+          // Ambil data form
+          const name = event.target.name.value;
+          const email = event.target.email.value;
+          const message = event.target.message.value;
+      
+          // Kirim data menggunakan EmailJS
+          emailjs.send('service_vqfoan3', 'template_y2jxvjb', {
+            name: name,
+            email: email,
+            message: message
+          })
+          .then(function(response) {
+            const alert = document.getElementById('status')
+            alert.innerHTML = "Message sent successfully!";
+            alert.classList.add("non-hide");
+            alert.classList.add("alert-success");
+            alert.classList.remove("hide");
+          }, function(error) {
+            const alert = document.getElementById('status')
+            alert.innerHTML = "Failed to send message!";
+            alert.classList.add("non-hide");
+            alert.classList.add("alert-danger");
+            alert.classList.remove("hide");
+            console.log(error);
+            
+          });
+          console.log(email);
+          
+          
+        });
+      </script>
     <script>
         AOS.init();
 
@@ -475,22 +512,6 @@
             glare: true,
             "max-glare": 0.5
         });
-
-
-        const scriptURL =
-            'https://script.google.com/macros/s/AKfycbwusY1GsWGfab1HdmuMuTeVDCWzOQyaua3cOIFx2gIgD9yxqQcEDkRDmaBS9yBE3Xcp/exec'
-        const form = document.forms['submit-to-google-sheet']
-
-        form.addEventListener('submit', e => {
-            e.preventDefault()
-            fetch(scriptURL, {
-                    method: 'POST',
-                    body: new FormData(form)
-                })
-                .then(response => console.log('Success!', response))
-                .catch(error => console.error('Error!', error.message))
-            alert("Message has Send")
-        })
 
         var swiper = new Swiper('.swiper-container', {
             effect: 'coverflow',
