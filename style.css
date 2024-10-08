@@ -14,10 +14,10 @@ body {
     width: 100vw;
 }
 .non-hide{
-    display: block;
+    display: flex;
 }
 .hide{
-    display: none;
+    display: none!important;
 }
 .nav {
     width: 200px;

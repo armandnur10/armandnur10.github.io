@@ -119,9 +119,15 @@
             <div>
                 <p class="fs-1 text-light fw-bold m-2 my-4">Get To Know Me !</p>
 
-                <p class="text-light opacity-75">Hello My name is Armand Nur Fikhri Ramadhan. You can call me Armand, mann, fikri, or anything else. I'm just a boy from East Jakarta. But now i live in Jonggol. Why?Because i'm on Boarding School right now. My school name is IDN Boarding School (for now). And it's locate in Sukanegara Jonggol West Java.</p>
+                <p class="text-light opacity-75">Hello My name is Armand Nur Fikhri Ramadhan. You can call me Armand,
+                    mann, fikri, or anything else. I'm just a boy from East Jakarta. But now i live in Jonggol.
+                    Why?Because i'm on Boarding School right now. My school name is IDN Boarding School (for now). And
+                    it's locate in Sukanegara Jonggol West Java.</p>
 
-                <p class="text-light opacity-50">So in this portfolio i'll show to you all achivement that i get in my life. Before that, let me tell you something. In my school the student must to learn the thing that been learned by intermediate progammer. So i usually getting hard to proccessing the subject. And i hope after finishing this school i will be professional progamming.</p>
+                <p class="text-light opacity-50">So in this portfolio i'll show to you all achivement that i get in my
+                    life. Before that, let me tell you something. In my school the student must to learn the thing that
+                    been learned by intermediate progammer. So i usually getting hard to proccessing the subject. And i
+                    hope after finishing this school i will be professional progamming.</p>
 
                 <a href="#contact" class="btn m-2 p-4">
                     <i class="uil uil-message"></i>
@@ -398,14 +404,21 @@
         <h1 data-aos="fade-right" class="justify-content-start">Contact</h1>
         <div class="contact-container">
             <form id="contact-form">
-                <input data-aos="fade-right" type="text" name="name" label="name" placeholder="Your Name..." required>
+                <input data-aos="fade-right" type="text" name="from_name" label="name" placeholder="Your Name..."
+                    required>
 
-                <input data-aos="fade-right" type="email" name="email" label="email" id="email" placeholder="Your Email..." required>
+                <input data-aos="fade-right" type="email" name="email" label="email" id="email"
+                    placeholder="Your Email..." required>
 
                 <textarea data-aos="fade-right" name="message" label="message" id="feedback" rows="10"
                     placeholder="feedback or question" required></textarea>
                 <button class="btn" type="submit">Kirim</button>
-                <div id="status" class="alert hide my-3 mx-1 w-100 text-center" style="border-radius: 0;" role="alert"></div>
+                <div id="status"
+                    class="alert hide my-3 mx-1 w-100 text-center align-items-center justify-content-center position-relative"
+                    style="border-radius: 0;" role="alert">
+                    <div id="text-alert"></div>
+                    <div style="position: absolute; right: 1rem;" id="countdown">5s</div>
+                </div>
             </form>
         </div>
         <h1 data-aos="fade-left" class="justify-content-end">Me!</h1>
@@ -449,49 +462,83 @@
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-    <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-</script>
-    <script type="text/javascript">
-      (function(){
-          emailjs.init("xWNx5sqSIxf2S2sKZ");
-      })();
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
     </script>
     <script type="text/javascript">
-        document.getElementById('contact-form').addEventListener('submit', function(event) {
-          event.preventDefault(); // Mencegah reload halaman
-          
-          // Ambil data form
-          const name = event.target.name.value;
-          const email = event.target.email.value;
-          const message = event.target.message.value;
-      
-          // Kirim data menggunakan EmailJS
-          emailjs.send('service_vqfoan3', 'template_y2jxvjb', {
-            name: name,
-            email: email,
-            message: message
-          })
-          .then(function(response) {
-            const alert = document.getElementById('status')
-            alert.innerHTML = "Message sent successfully!";
-            alert.classList.add("non-hide");
-            alert.classList.add("alert-success");
-            alert.classList.remove("hide");
-          }, function(error) {
-            const alert = document.getElementById('status')
-            alert.innerHTML = "Failed to send message!";
-            alert.classList.add("non-hide");
-            alert.classList.add("alert-danger");
-            alert.classList.remove("hide");
-            console.log(error);
-            
-          });
-          console.log(email);
-          
-          
+        (function () {
+            emailjs.init("xWNx5sqSIxf2S2sKZ");
+        })();
+    </script>
+    <script type="text/javascript">
+        document.getElementById('contact-form').addEventListener('submit', function (event) {
+            event.preventDefault(); // Mencegah reload halaman
+
+            // Ambil data form
+            const name = event.target.from_name.value;
+            const email = event.target.email.value;
+            const message = event.target.message.value;
+            const user = "Armand Nur";
+
+            // Kirim data menggunakan EmailJS
+            emailjs.send('service_vqfoan3', 'template_y2jxvjb', {
+                    from_name: name,
+                    from_email: email,
+                    to_name: user,
+                    message: message
+                })
+                .then(function (response) {
+                    const alert = document.getElementById('status')
+                    const text = document.getElementById('text-alert')
+                    text.innerHTML = "Message sent successfully!";
+                    alert.classList.add("non-hide");
+                    alert.classList.add("alert-success");
+                    alert.classList.remove("hide");
+                    const countdownElement = document.getElementById("countdown");
+                    let count = 5;
+                    const intervalId = setInterval(() => {
+                        countdownElement.innerHTML = (count - 1) + "s";
+                        count--;
+                        
+                        if (count <= 0) {
+                            clearInterval(intervalId);
+                            countdownElement.innerHTML = 5 + "s";
+
+                        }
+                    }, 1000);
+                    setTimeout(() => {
+                        alert.classList.remove("non-hide");
+                        alert.classList.add("hide");
+                    }, 5000);
+                }, function (error) {
+                    const alert = document.getElementById('status')
+                    const text = document.getElementById('text-alert')
+                    text.innerHTML = "Failed to send message!";
+                    alert.classList.add("non-hide");
+                    alert.classList.add("alert-danger");
+                    alert.classList.remove("hide");
+                    const countdownElement = document.getElementById("countdown");
+                    let count = 5;
+                    const intervalId = setInterval(() => {
+                        countdownElement.innerHTML = (count - 1) + "s";
+                        count--;
+                        
+                        if (count < 0) {
+                            clearInterval(intervalId);
+                            countdownElement.innerHTML = 5 + "s";
+
+                        }
+                    }, 1000);
+                    setTimeout(() => {
+                        alert.classList.remove("non-hide");
+                        alert.classList.add("hide");
+                    }, 5000);
+                    console.log(error);
+
+                });
+
+
         });
-      </script>
+    </script>
     <script>
         AOS.init();
 
